@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Igor-Solovko/argo_poc.git
     targetRevision: HEAD
-    path: main
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: default
