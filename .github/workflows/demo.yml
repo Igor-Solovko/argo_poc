@@ -1,0 +1,17 @@
+name: argo trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: 'Please specify docker image, what giong to be deployed in k8s'
+        required: true
+        default: 'nginxdemos/hello:latest'
+jobs:
+  print-hello-for-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Provide docker image to k8s deployemnt
+        run: echo "we going to deploy $ {{ github.event.inputs.username }}"
