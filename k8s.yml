@@ -31,8 +31,22 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginxdemos/hello:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
           protocol: TCP
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: ingress
+
+# spec:
+#   rules:
+#   - host: sometest.net
+#     http:
+#       paths:
+#       - backend:
+#         serviceName: nginx
+#         servicePort: 80
