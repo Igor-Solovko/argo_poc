@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Provide docker image to k8s deployemnt
-        run: echo "we going to deploy ${IMAGE}"
+        run: echo "we going to deploy ${{ IMAGE }}"
