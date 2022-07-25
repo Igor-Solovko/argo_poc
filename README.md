@@ -34,8 +34,5 @@ kubectl --namespace argo-events port-forward svc/webhook-eventsource-svc 12000:1
 curl -X POST -H "Content-Type: application/json" -d '{"message":"nginxdemos/hello:latest"}' http://localhost:12000/devops-toolkit  <br>
 
 kubectl --namespace argo-events apply -f sensor.yaml  <br>
-
-
 kubectl --namespace argo-events logs --selector app=payload  <br>
-
 kubectl --namespace argo-events delete pods --selector app=payload  <br>
